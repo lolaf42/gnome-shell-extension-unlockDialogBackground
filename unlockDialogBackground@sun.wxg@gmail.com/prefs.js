@@ -44,10 +44,15 @@ class PrefsWidget {
         let setting_label = new Gtk.Label({ label: "Picture", xalign: 0, hexpand: true });
         this.setting_entry = new Gtk.Entry({ hexpand: true, margin_start: 20 });
 
+
+
+
         this.setting_entry.set_text(this.gsettings.get_string('picture-uri'));
-        this.setting_entry.connect('changed', (entry) => { this.gsettings.set_string('picture-uri', entry.get_text()); });
-        this.setting_entry.set_text(this.gsettings.get_string('picture-uri-dark'));
-        this.setting_entry.connect('changed', (entry) => { this.gsettings.set_string('picture-uri-dark', entry.get_text()); });
+        this.setting_entry.connect('changed', entry => {
+        this.gsettings.set_string('picture-uri', entry.get_text());
+        });
+
+        
 
         this.fileChooseButton = new Gtk.Button({ margin_start: 5 });
         this.fileChooseButton.set_label("Browse");
