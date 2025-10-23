@@ -15,7 +15,7 @@ import * as LoginManager from 'resource:///org/gnome/shell/misc/loginManager.js'
 import * as Params from 'resource:///org/gnome/shell/misc/params.js';
 import * as Signals from 'resource:///org/gnome/shell/misc/signals.js';
 
-const BACKGROUND_SCHEMA = 'org.gnome.shell.extensions.unlockDialogBackground';
+const BACKGROUND_SCHEMA = 'const BACKGROUND_SCHEMA = 'org.gnome.desktop.background';';
 //const BACKGROUND_SCHEMA = 'org.gnome.desktop.background';
 const PRIMARY_COLOR_KEY = 'primary-color';
 const SECONDARY_COLOR_KEY = 'secondary-color';
