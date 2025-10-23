@@ -194,4 +194,12 @@ export default class UnlockDialogBackgroundPrefs extends ExtensionPreferences {
         let widget = new PrefsWidget(this.getSettings());
         return widget.widget;
     }
+
 }
+
+let path = dialog.get_file().get_path();
+let uri = GLib.filename_to_uri(path, null);
+this.setting_entry.set_text(uri);
+this.gsettings.set_string('picture-uri', uri);
+this.gsettings.set_string('picture-uri-dark', uri);  }
+
